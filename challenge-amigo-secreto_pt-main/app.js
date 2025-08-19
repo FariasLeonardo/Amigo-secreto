@@ -3,6 +3,7 @@ let amigos = [];
 let amigosDisponiveis = [];
 let listaDeAmigos = document.getElementById("listaAmigos");
 let nomeSorteado = document.getElementById("resultado");
+let btnSortear = document.querySelector (".button-draw");
 
 // aciona a função adicionarAmigo apertando enter
 document.getElementById("amigo").addEventListener('keydown', function (event) {
@@ -60,11 +61,13 @@ function sortearAmigo() {
     nomeSorteado.innerHTML = `
         <h3> O amigo secreto sorteado é: </h3>
         <p class = "nome-sorteado">${amigosDisponiveis[indiceAleatorio]}</p>
-        <p class="contagem-regressiva"></p>
+        <p class="contagem-regressiva">Você tem 10 segundos para anotar.</p>
         `;
 
+    btnSortear.disabled = true;    
+
     // Inicia o cronômetro
-    iniciarContagemRegressiva(2);
+    iniciarContagemRegressiva(10);
 
     //remove o nome sorteado do array
     amigosDisponiveis.splice(indiceAleatorio, 1);
@@ -84,6 +87,7 @@ function iniciarContagemRegressiva(tempo) {
             nomeSorteado.innerHTML = '';
             listaDeAmigos.style.display = 'block';
             atualizarListaAmigos();
+            btnSortear.disabled = false;
         }
     }, 1000);
 
