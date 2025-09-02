@@ -48,7 +48,7 @@ O nome sorteado aparece com um temporizador de 10 segundos. Após o tempo, o res
 
 ### Como Utilizar 👇
 
-1. Abra o arquivo `index.html` em seu navegador.  
+1. Abra o arquivo `index.html` em seu navegador ou clique em [Amigo-secreto](https://fariasleonardo.github.io/Amigo-secreto/).  
 2. Digite o nome de um amigo no campo de texto e clique em **"Adicionar"** ou pressione `Enter`.  
 3. Repita o processo para adicionar todos os participantes.  
 4. Após adicionar todos os nomes, clique em **"Sortear Amigo"**.  
